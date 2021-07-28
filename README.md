@@ -138,3 +138,21 @@ Y se vería la información en formato json listo para compartirlo con el fronte
             created_at	"2021-04-22T19:44:46.038Z"
             updated_at	"2021-04-22T19:44:46.038Z"
 
+10. Las aplicaciones frontend (Node + ReactJS) y backend (Rails API) que se ejecutan en diferentes puertos experimentarán problemas de comunicación a menos que CORS esté configurado.
+
+CORS define un mecanismo de acceso entre dominios que permite a AJAX lograr el acceso entre dominios.
+
+10.1. Añadir rack-cors gem a Gemfile y bundle install.
+
+10.2. Luego abrir el archivo config/initializers/cors.rb.
+Tenemos que ver el siguiente codigo, (sino está, ponerlo o descomentarlo):
+
+	Rails.application.config.middleware.insert_before 0, Rack::Cors do
+	   allow do
+	     origins '*'
+	     resource '*',
+	       headers: :any,
+	       methods: [:get, :post, :put, :patch, :delete, :options, :head]
+	   end
+	 end
+
