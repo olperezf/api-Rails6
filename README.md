@@ -1,4 +1,4 @@
-# Elaboración de una Api con Ruby on Rails version 6.1.4
+# Elaboración de una Api con Ruby 3.0 on Rails version 6.1.4
 1. Ejecutar en la consola:  
 rails new (nombre del proyecto) --api
 
