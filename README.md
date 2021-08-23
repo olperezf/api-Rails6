@@ -49,9 +49,11 @@
 
 - Instalar Rails, Puede instalar la última versión ejecutando el siguiente comando. 
 
-      $ gem install rails -v 6.1.4
+      $ gem install rails -v 6.1.4     
       
 Y listo!!!
+
+Para mayor información del rvm visitar la página https://rvm.io/rvm/install
 
 ### Creación del api:
 1. Ejecutar en la consola:  
