@@ -1,4 +1,59 @@
 # Elaboración de una Api con Ruby 3.0 on Rails version 6.1.4
+### Instalación de Ruby y Rails:
+- Actualizacion e instalación de curl: librería disponible en el sistema operativo, orientada a la transferencia de archivos. gnupg2: herramienta de cifrado y firmas difgitales. Ejecutar los siguientes comandos:
+
+      $ sudo apt update 
+      $ sudo apt install curl gnupg2 
+
+- Instalar RVM. Antes de instalar RVM, primero debemos importar la clave pública en nuestro sistema y luego usar curl para instalar rvm en nuestro sistema.
+
+      $ curl -sSL https://rvm.io/mpapis.asc | sudo gpg2 --import - 
+      $ curl -sSL https://rvm.io/pkuczynski.asc | sudo gpg2 --import - 
+      $ curl -sSL https://get.rvm.io | sudo bash -s stable 
+ 
+ - Después de instalar RVM primero necesitamos configurar el entorno rvm usando el siguiente comando, para que el shell actual tome nuevas configuraciones de entorno.
+ 
+       $ source /etc/profile.d/rvm.sh 
+
+- Instale todas las dependencias para instalar Ruby automáticamente en el sistema. Ejecute el siguiente comando en la terminal.
+
+      $ rvm requirements 
+      
+- Obtenga una lista de las versiones disponibles del lenguaje Ruby. Puede instalar cualquier versión de su elección o los requisitos que se muestran en la lista.
+
+      $ rvm list known
+      
+      [ruby-]1.8.6[-p420]
+      [ruby-]1.8.7[-head] # security released on head
+      [ruby-]1.9.1[-p431]
+      [ruby-]1.9.2[-p330]
+      [ruby-]1.9.3[-p551]
+      [ruby-]2.0.0[-p648]
+      [ruby-]2.1[.10]
+      [ruby-]2.2[.10]
+      [ruby-]2.3[.8]
+      [ruby-]2.4[.10]
+      [ruby-]2.5[.8]
+      [ruby-]2.6[.6]
+      [ruby-]2.7[.2]
+      [ruby-]3[.0.0]
+      ruby-head
+      
+- RVM es útil para la instalación de múltiples versiones de Ruby en un solo sistema. Use el siguiente comando para instalar Ruby requerido en su sistema. Como se muestra a continuación, el ejemplo instalará Ruby 3 en el sistema Debian.
+
+      $ rvm install 3 
+      
+- Con el siguiente comando, puede verificar que se usa la versión actual de ruby.
+
+      $ ruby -v
+
+- Instalar Rails, Puede instalar la última versión ejecutando el siguiente comando. 
+
+      $ gem install rails -v 6.1.4
+      
+Y listo!!!
+
+### Creación del api:
 1. Ejecutar en la consola:  
 rails new (nombre del proyecto) --api
 
