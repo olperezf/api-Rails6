@@ -174,7 +174,7 @@ rails db:migrate
 Rails s
 
 9. Y en el navegador se coloca la dirección:
-http://127.0.0.1:3000/api/v1/users/
+`http://127.0.0.1:3000/api/v1/users/`
 
 Y se vería la información en formato json listo para compartirlo con el frontend que se vaya a utilizar:
 	
