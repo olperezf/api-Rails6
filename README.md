@@ -1,4 +1,4 @@
-# Elaboración de una Api con Ruby 3.0 on Rails version 6.1.4
+# Elaboración de una Api con Ruby 3.0 on Rails version 6.1.4 en Debian 10
 ### Instalación de Ruby y Rails:
 - Actualizacion e instalación de curl: librería disponible en el sistema operativo, orientada a la transferencia de archivos. gnupg2: herramienta de cifrado y firmas difgitales. Ejecutar los siguientes comandos:
 
