@@ -107,15 +107,13 @@ rails db:migrate
 
        Rails.application.routes.draw do
            namespace :api do
-            namespace :v1 do
              resources :users
-            end
            end
        end
        
- 7. Ir Controllers/api/v1/users_controller.rb y quedaría:
+ 7. Ir Controllers/api/users_controller.rb y quedaría:
 
-        module Api::V1
+        module Api
           class UsersController < ApplicationController
             before_action :set_user, only: [:show, :update, :destroy]
 
@@ -174,7 +172,7 @@ rails db:migrate
 Rails s
 
 9. Y en el navegador se coloca la dirección:
-`http://127.0.0.1:3000/api/v1/users/`
+`http://127.0.0.1:3000/api/users/`
 
 Y se vería la información en formato json listo para compartirlo con el frontend que se vaya a utilizar:
 	
